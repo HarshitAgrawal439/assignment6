@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        p{
+            font-style: italic;
+            font-weight: bolder;
+        }
+        .class {
+    width: 725px;
+    height: 364px;
+    background-color: #bff5ac;
+    border: 2px solid black;
+    border-radius: 39px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="class">
+    <h1 align="center">Guessing The Number</h1>
+    <center><button type="button" onclick="gussing()">Start Game</button></center>
+    <center><p id="container"></p>
+    <p id="harshit"></p></center>
+    </div>
+    <script>
+     function gussing(){
+       
+           a=prompt("Enter The Number between 1 and 100")
+            b="you win!"
+            txt=""
+            i=1
+        
+           if(a>=0&&a<=100){
+            while(i<=5)
+            {
+                num=Math.floor(Math.random()*100)
+               txt+="Computer Guessed " +  num+"<br>" +"<br >"
+         
+           if(a==num){
+            c+="ypu lose!"
+            break;
+           }
+           i++;
+           }
+           document.getElementById("container").innerHTML= txt
+           document.getElementById("harshit").innerHTML=b
+           document.getElementById("harshit").innerHTML=c
+
+
+        }
+           else{
+            prompt("invalid")
+           }   
+           
+      }
+
+
+
+    </script>
+    
+    
+</body>
+</html>
